@@ -1,0 +1,24 @@
+h2 Качество
+mixin article(img, head, articleText, dataRead, ident)
+	.articles_block
+		img(src="images/#{img}.png" alt="scissors")
+		.articles_block_text
+			h4 #{head}
+			p #{articleText}
+			button.open_popup(data-read="#{dataRead}" id="#{ident}") Читать
+.articles
+	+article("art1", "Ремесло идущее сквозь время", "Our barbershop is committed to quality haircuts and exceptional customer...", "01", "01")
+	+article("art1", "Борода всему голова", "Our barbershop is committed to quality haircuts and exceptional customer...", "02", "02")
+	+article("art1", "Сквозь время", "Our barbershop is committed to quality haircuts and exceptional customer...", "03", "03")
+	+article("art1", "Лучше стрижки в мире нет", "Our barbershop is committed to quality haircuts and exceptional customer...", "04", "04")
+.monocule
+	img(src="images/monocule.png" alt="monocule")
+.teaMug#mug
+	img(src="images/teaMug.png" alt="tea mug")
+.some_line_vert
+	.some_line_vert_blocky
+.some_line_hor
+	.some_line_hor_blocky
++bottom_logo
+
+

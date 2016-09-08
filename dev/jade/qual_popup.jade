@@ -1,0 +1,19 @@
+mixin popup_window(head, img, dataPop, ident, popID)
+	.popup_wrapper(id="popup_#{popID}")
+		.popup_block
+			img(src="images/#{img}.png" alt="scissors")
+			.articles_block_text
+				h4 #{head}
+				p  Our barbershop is committed to quality haircuts and exceptional customer...
+				p Prices in a relaxing friendly atmosphere. Our dedicated staff delivers the experience tailored to the needs, requirements and budget of our clients. So, come and try! Make sure you are in the right place. Don't miss your chance to look your best! Our barbershop is committed to quality haircuts and exceptional customer service at affordable prices in a relaxing friendly atmosphere.
+				p Our dedicated staff delivers the experience tailored to the needs, requirements and budget of our clients. So, come and try! Make sure you are in the right place. Don't miss your chance to look your best! Flexible prices in a relaxing friendly atmosphere. Our dedicated staff delivers the experience tailored to the needs, requirements and budget of our clients. So, come and try! Make sure you are in the right place. Don't miss your chance to look your best! Our barbershop is committed to quality haircuts and exceptional customer service at affordable prices in a relaxing friendly atmosphere.
+				p Our dedicated staff delivers the experience tailored to the needs, requirements and budget of our clients. So, come and try! Make sure you are in the right place. Don't miss your chance to look your best!
+
+			button.close_popup(data-pop="#{dataPop}" id="#{ident}") Закрыть
+			.teaMug_popup
+				img(src="images/teaMug.png" alt="tea mug")
++popup_window("Ремесло идущее сквозь время", "art1", "01", "closeIt_01", "01")
++popup_window("Борода всему голова", "art1", "02", "closeIt_02", "02")
++popup_window("Сквозь время", "art1", "03", "closeIt_03", "03")
++popup_window("Лучше стрижки в мире нет", "art1", "04", "closeIt_04", "04")
+				

@@ -1,0 +1,41 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		title Долгоруковъ(dev_02)
+		meta(name="viewport" content="width=device-width, initial-scale=1.0").
+		link(rel="stylesheet" href="assets/style.css").
+	body
+		mixin nav_items(data, itemName, text, img, imgC)
+			a.nav__item(href="#" data-item="#{data}" id="#{itemName}")
+				h3 #{text}
+				img.reg(src="images/#{img}.png" alt="scissors")
+				img.hover(src="images/#{imgC}.png" alt="scissors") 
+
+		mixin bottom_logo
+			.bottom_logo
+				img(src="images/mainLogo.png" alt="LOGO")
+				h6 2016, цирюльня “Долгоруков”. Сделано в Leeco.
+		include jade/qual_popup.jade
+		.nav_wrapper
+			.nav
+				+nav_items("0", "about", "О нас", "aboutNav", "open1")
+				+nav_items("1", "services", "Услуги", "serviceNav", "open2")
+				+nav_items("2", "history", "История", "historNav", "open3")
+				+nav_items("3", "quality", "Качество", "qualNav", "open4")
+				+nav_items("4", "contact", "Контакты", "contactNav", "open5")
+		.slider_view_box
+			#slideIt.page__wrapper
+				.page__wrapper__block_about
+					include jade/about.jade
+				.page__wrapper__block_service
+					include jade/services.jade
+				.page__wrapper__block_historygit
+					include jade/history.jade
+				.page__wrapper__block_quality
+					include jade/quality.jade
+				.page__wrapper__block_contacts
+					include jade/contacts.jade
+	script(src="assets/script.js")
+
+
